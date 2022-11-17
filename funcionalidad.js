@@ -9,14 +9,16 @@ use.products.addProduct(
   `Para llevar todo lo que quieras,pero con una mochila roja`,
   500,
   "https://static.dafiti.com.ar/p/jansport-9733-76539-1-product.jpg",
-  50
+  50,
+  1548
 );
 use.products.addProduct(
   "Mochila azul",
   `Para llevar todo lo que quieras,pero con una mochila azul`,
   700,
   "https://www.tematika.com/media/catalog/Ilhsa/Imagenes/671976.jpg",
-  20
+  20,
+  1546
 );
 
 //* Ver todos los productos -->  use.products.getProduct()

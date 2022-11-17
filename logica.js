@@ -2,29 +2,36 @@ class ProductMananger {
   constructor(products) {
     this.products = products;
   }
-  addProduct = (title, description, price, thumbnail, stock) => {
-    if ((title, description, price, thumbnail, stock)) {
-      if (this.products.length > 0) {
-        let idParaProducto = this.products[this.products.length - 1].id + 1;
-        let nuevoProducto = {
-          id: idParaProducto,
-          title,
-          description,
-          price,
-          thumbnail,
-          stock,
-        };
-        this.products.push(nuevoProducto);
-      } else {
-        let nuevoProducto = {
-          id: 1,
-          title,
-          description,
-          price,
-          thumbnail,
-          stock,
-        };
-        this.products.push(nuevoProducto);
+  addProduct = (title, description, price, thumbnail, stock,code) => {
+    if ((title, description, price, thumbnail, stock,code)) {
+      const codeCheck=this.products.find((el)=>el.code==code)
+      if(codeCheck){
+        console.log(`El código ya existe, porfavor agregue un producto valido.`)
+      }else{
+        if (this.products.length > 0) {
+          let idParaProducto = this.products[this.products.length - 1].id + 1;
+          let nuevoProducto = {
+            id: idParaProducto,
+            title,
+            description,
+            price,
+            thumbnail,
+            stock,
+            code
+          };
+          this.products.push(nuevoProducto);
+        } else {
+          let nuevoProducto = {
+            id: 1,
+            title,
+            description,
+            price,
+            thumbnail,
+            stock,
+            code
+          };
+          this.products.push(nuevoProducto);
+        }
       }
     } else {
       console.log(`Porfavor agrega todos los detalles del producto`);
